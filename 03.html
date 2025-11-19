@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tb01,#tb02{
+            border: 2px solid #115850;
+            
+            width: 300px;
+            margin: 20px auto;
+            /**border-collapse: collapse;**/
+            border-spacing: 5px;
+            border-collapse: separate;
+            color: #115850;
+        }
+        #tb01 td,#tb02 td{
+            border:1px solid #115850;
+            text-align: center;
+            margin: 5px;
+
+        }
+        #tb01 tr:first-child,#tb02 tr:first-child{
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 引用 -->
+    <p>提供離島最便捷的交通，前往綠島旅遊，目前可以搭乘華信航空公司的小型飛機，</p>
+    <q>航行時間只需15分鐘左右。對遊客們是很便利的交通選擇，唯航班飛行受氣候影響很大，</q>
+    <blockquote>搭乘前應先注意天候狀況，如風速太大或降雨等因素都影響飛機航行與否。</blockquote>
+    <!-- 表格 -->
+     <table id="tb02" border="5"  align="center">
+        <tr align="center">
+            <th>標題一 +</th>
+            <th>標題二 +</th>
+        </tr>
+        <tr align="center">
+            <td>資料一</td>
+            <td>資料二</td>
+        </tr>
+     </table>
+     <!-- Emmet 語法 table>tr*3>td*3-->
+    <table id="tb01" border="2" align="center" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>編號</td>
+            <td>公司</td>
+            <td>電話</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>09XX-XXX-XXX</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>09XX-XXX-XXX</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2">B</td>
+            <td>09XX-XXX-XXX</td>
+        </tr>
+        <tr>
+            <td>09XX-XXX-XXX</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>09XX-XXX-XXX</td>
+        </tr>
+        <tr>
+            <td colspan="3">2</td>
+        </tr>
+        
+    </table>
+
+</body>
+</html>
