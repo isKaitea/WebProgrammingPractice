@@ -14,17 +14,17 @@
         h1 {
             text-align: center;
             color: #333;
-            
         }
 
         .section {
             background: #fff;
-            padding: 20px;
+            padding: 20px 20px 40px;
             margin: 20px auto;
             border-radius: 12px;
             width: 90%;
             max-width: 700px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
         }
 
         .section h2 {
@@ -47,22 +47,50 @@
         a:hover {
             text-decoration: underline;
         }
+
+        nav p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        /* 右下角回頂部連結 */
+        .back-top {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+        .back-top:hover {
+            color: #000;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
 
-<h1>歡迎來到 KT 的新手網站</h1>
+<h1 id="top">KT 的新手網站課程筆記</h1>
+
+<nav>
+    <p><a href="#第一堂課">第一堂課</a> | 
+        <a href="#第二堂課">第二堂課</a> | 
+        <a href="#第三堂課">第三堂課</a> | 
+        <a href="#第四堂課">第四堂課</a> | 
+        <a href="#第五堂課">第五堂課</a></p>
+</nav>
 
 <!-- 第一堂課 -->
 <div class="section">
-    <h2>第一堂課</h2>
+    <h2 id="第一堂課">第一堂課</h2>
     <p>簡介:環境架設 & 基本語法</p>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
 
 <!-- 第二堂課 -->
 <div class="section">
-    <h2>第二堂課</h2>
+    <h2 id="第二堂課">第二堂課</h2>
     <table>
         <tr>
             <td style="width: 15%;">HTML</td>
@@ -88,13 +116,15 @@
         </tr>
     </table>
     
-    <p>課堂練習 web01：<a href="web01/index.html">結婚事務所</a></p>
+    <p>課堂練習 web01：<a href="web01/index.html" target="_blank">結婚事務所</a></p>
     <p>簡介:HTML 標籤 & CSS 設定</p>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
 
 <!-- 第三堂課 -->
 <div class="section">
-    <h2>第三堂課</h2>
+    <h2 id="第三堂課">第三堂課</h2>
     <table>
         <tr>
             <td style="width: 15%;">HTML</td>
@@ -120,23 +150,59 @@
         </tr>
     </table>
 
-    <p>課堂作業 web02：<a href="web02/index.html">考生服務網</a></p>
-    <p>課堂練習 web03：<a href="web03/index.html">綠島觀光景點簡介</a></p>
+    <p>課堂作業 web02：<a href="web02/index.html" target="_blank">考生服務網</a></p>
+    <p>課堂練習 web03：<a href="web03/index.html" target="_blank">綠島觀光景點簡介</a></p>
     <hr>
     <p>HTML：錨點設定</p>
-    <p>範例錨點：<a href="./web03/index.html#t4">朝日溫泉</a></p>
+    <p>範例錨點：<a href="./web03/index.html#t4" target="_blank">朝日溫泉</a></p>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
 
 <!-- 第四堂課 -->
 <div class="section">
-    <h2>第四堂課</h2>
-    <p>--------------</p>
+    <h2 id="第四堂課">第四堂課</h2>
+    <table>
+        <tr>
+            <td style="width: 15%;">HTML</td>
+            <td>
+                a target="_blank":連結開啟新視窗<br>
+                
+            <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>
+                <p>background: linear-gradient(to right[向右漸層],[左邊顏色],[右邊顏色]);</p>
+                <p>background-image: url([圖片位址]);</p>
+                <p>background-repeat: no-repeat[不重複];</p>
+                <p>background-position: center[左右對齊] center[上下對齊];</p>
+            
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>快捷鍵</td>
+            <td>
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
 
 <!-- 第五堂課 -->
 <div class="section">
-    <h2>第五堂課</h2>
+    <h2 id="第五堂課">第五堂課</h2>
     <p>---------------</p>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
 
 </body>
