@@ -1,0 +1,101 @@
+body{
+    background-color: #000;
+    
+}
+#nav{
+    background-image: url(../images/menu.gif);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 400px;
+    margin: 0; 
+    padding: 10px;
+    float: left;
+    list-style-type: none;
+}
+#nav ul{
+    padding: 0px;
+    margin: 0px;
+    margin-top:160px;
+    
+}
+#nav li{
+    display: inline-block; /* 橫向排列 */
+    margin-right: 10px;
+}
+#nav a{
+  display: block;
+  width: 120px;  
+  height: 40px;  
+  text-indent: -9999px; 
+  /* background-size: cover;  */
+}
+#nav a[href="index.html"]{
+    background-image: url(../images/b001.gif);
+    background-repeat: no-repeat;
+    margin:10px;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="01.html"]{
+    background-image: url(../images/b002.gif);
+    background-repeat: no-repeat;
+    margin:10px;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="02.html"]{
+    background-image: url(../images/b003.gif);
+    background-repeat: no-repeat;
+    margin:10px;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="03.html"]{
+    background-image: url(../images/b004.gif);
+    background-repeat: no-repeat;
+    margin:10px;
+    width: 120px;
+    height: 28px;
+}
+
+#nav a[href="index.html"]:hover{
+    background-image: url(../images/b001over.gif);
+    background-repeat: no-repeat;
+    margin:10px 0 10px 0;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="01.html"]:hover{
+    background-image: url(../images/b002over.gif);
+    background-repeat: no-repeat;
+    margin:10px 0 10px 0;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="02.html"]:hover{
+    background-image: url(../images/b003over.gif);
+    background-repeat: no-repeat;
+    margin:10px 0 10px 0;
+    width: 120px;
+    height: 28px;
+}
+#nav a[href="03.html"]:hover{
+    background-image: url(../images/b004over.gif);
+    background-repeat: no-repeat;
+    margin:10px 0 10px 0;
+    width: 120px;
+    height: 28px;
+}
+
+
+#top {
+    background-image: url(../images/top.gif);
+    height: 48px;
+    background-repeat: no-repeat;
+    margin-left: 150px;
+}
+#main{
+    background-color: #FFF;
+    margin: 0 10px 0 170px;
+    padding: 0 20px;
+}

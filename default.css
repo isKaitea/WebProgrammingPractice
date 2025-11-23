@@ -1,0 +1,9 @@
+body{
+    background-color: antiquewhite;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: '標楷體';
+}
+a[href="http://tw.yahoo.tw"]{
+    color: darkblue;
+}
