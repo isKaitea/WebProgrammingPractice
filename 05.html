@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第六堂課</title>
+    <style>
+        /*
+        單位:px-像素、em-字元、pt-點、%-百分比
+        */
+        .p1{
+            text-indent: -4em;
+            padding-left: 6em;
+        }
+        .p2{
+            text-indent: -4em;
+            padding-left: 8.5em;
+        }
+        p{
+            text-align: justify;
+        }
+        span{
+            color: red;
+            text-decoration: overline underline line-through;
+            
+        }
+        #cat{
+            width: 200px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 3000;
+        }
+        #dog{
+            width: 200px;
+            position: absolute;
+            top: 0px;
+            right: 120px;
+            z-index: 4000;
+        }
+        #box{
+            width: 700px;
+            height: 500px;
+            background-color: lightgreen;
+            position: relative;
+        }
+        #dog2{
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #cat2{
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+    </style>
+</head>
+<body>
+<h2>縮排與凸排</h2>
+<h3>教學課程：設定網站和專案檔案</h3>
+
+<p>本教學課程介紹 <span>Macromedia Dreamweaver</span> 8 網站的概念，並說明如何設定 Cafe Townsend 範例網站的專案檔案。在Dreamweaver 中，網站通常由兩個部分組成：本機電腦 (本機網站) 上的一組檔案，以及當您準備將檔案公佈時，所要上傳的遠端網站伺服器位置 (遠端網站)。您使用 Dreamweaver「檔案」面板來管理網站的檔案。利用 Dreamweaver 建立網站最常用的方法，是在本機磁碟上建立及編輯頁面，然後再將這些頁面的複本上傳到遠端網站伺服器上，以便在網路上進行檢視。本教學課程僅教導如何設定本機網站，讓您能立即開始建立網頁。初步完成網站後，接著要學習如何建立遠端網站，以便將檔案上傳到網站伺服器。</p>
+
+
+<p class="p1">步驟一、在硬碟上建立名為 local_sites 的新資料夾。 例如，在以下兩個位置中擇一建立名為 local_sites 的資料夾：</p>
+
+<p class="p2">（1）Windows：C:\Documents and Settings\your_user_name\My Documents\local_sites 在 Macintosh 中，您的使用者資料夾中已經有一個資料夾稱為 Sites。Sites 資料夾不可以做為本機資料夾，Sites 資料夾是當您以 Macintosh 做為網站伺服器時，用來放置公用網頁的地方。</p>
+
+<p class="p2">（2）Macintosh：Macintosh HD/Users/your_user_name/Documents/local_sites注意 關於本機和遠端「根」資料夾?Dreamweaver 網站的本機「根」資料夾通常是網站的主要或最上層資料夾。通常在遠端網站 (網站伺服器) 上也會有一個對應的相同資料夾。根資料夾通常就是網站 URL 中，接在網域名稱之後的第一個部分。例如，如果本機根資料夾叫做 mywebsite，而您在遠端網站上定義了相同的根資料夾，那麼您網站的 URL 可能會像是 http://www.yahoo.com/mywebsite。</p>
+
+<p class="p1">步驟二、在硬碟上的 Dreamweaver 應用程式資料夾中找出 cafe_townsend 資料夾。 如果您將 Dreamweaver 設定於預設的位置，資料夾的路徑即如下所示：</p>
+
+<p class="p2">（1）Windows：C:\Program Files\Macromedia\Dreamweaver 8\Tutorial_assets\cafe_townsend\。 Sites 資料夾是當您以 Macintosh 做為網站伺服器時，用來放置公用網頁的地方。</p>
+
+<p class="p2">（2）Macintosh：Macintosh HD/Applications/Macromedia Dreamweaver 8/Tutorial_assets/cafe_townsend。接在網域名稱之後的第一個部分。例如，如果本機根資料夾叫做 mywebsite，而您在遠端網站上定義了相同的根資料夾，那麼您網站的 URL 可能會像是 http://www.yahoo.com/mywebsite。</p>
+
+<p>步驟三、將 cafe_townsend 資料夾複製到 local_sites 資料夾中。 cafe_townsend 資料夾將用來當作 Dreamweaver 網站的根資料夾 (主要資料夾)。</p>
+
+<h2>絕對定位</h2>
+
+<img id="cat" src="data:image/jpeg;base64,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" alt="">
+<img id="dog" src="https://png.pngtree.com/png-vector/20250111/ourmid/pngtree-golden-retriever-dog-pictures-png-image_15147078.png" alt="">
+
+<h2>相對定位</h2>
+<div id="box">
+    <img id="cat2" src="data:image/jpeg;base64,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" alt="">
+    <img id="dog2" src="https://png.pngtree.com/png-vector/20250111/ourmid/pngtree-golden-retriever-dog-pictures-png-image_15147078.png" alt="">
+</div>
+
+
+
+</body>
+</html>
