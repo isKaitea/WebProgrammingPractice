@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript入門</title>
+    <script>
+        //alert("Hello");
+        
+        console.log("123");
+        //使用document.write寫入一個標題
+        document.write('<h2>das</h2>');
+        
+        //全域變數
+        //var x =2;
+        //區域變數
+        let x = 2;
+        let y = 5;
+
+        console.log(x*x+x+1);
+        x = 3
+        console.log(x*x+y+1);
+
+        function Hello(){
+            let x =100;
+            console.log(x);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p id="test">I am XXXX</p>
+    <h2>變數</h2>
+    變數是用來儲存資料的容器，可以用來存放數字、文字、布林值<br>
+    <script>
+        //alert("Hello2");
+        //使用document.write寫入一個標題
+        document.write("<h2 style='color:red'>?</h2>")
+        //使用動態修改第一個h1的標題顏色
+
+        document.getElementsByTagName('h1')[0].style.color = 'green';
+        //使用動態修改id為test的標題顏色
+        document.getElementById("test").style.color = 'blue';
+    </script>
+</body>
+</html>
