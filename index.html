@@ -91,7 +91,7 @@
         <a href="#第五堂課">第五堂課</a></p>
     <p>
         <a href="#第六堂課">第六堂課</a> |
-        <a href="#第X堂課">第X堂課</a>
+        <a href="#第七堂課">第七堂課</a>
     </p>
 </nav>
 
@@ -340,6 +340,82 @@
     </p>
     <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
+<!-- 第七堂課 -->
+<div class="section">
+<h2 id="第七堂課">第七堂課：JavaScript — 函數 / 變數常數 / 物件 / 陣列</h2>
+
+    <table>
+        <tr>
+            <td style="width: 15%;">HTML</td>
+            <td>
+                <ul>
+                    <li>&lt;script&gt; 內可撰寫 JavaScript 程式。</li>
+                    <li>使用 id 搭配 document.getElementById() 取得元素。</li>
+                    <li>&lt;button onclick="functionName()"&gt; 可直接在 HTML 呼叫函數。</li>
+                    <li>input 元件可用 .value 取得輸入內容。</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>
+                <ul>
+                    <li><b>函數（Function）</b>：可封裝程式區塊並重複呼叫。</li>
+                    <pre>function showMessage(){ ... }</pre>
+                    <li><b>判斷式（if / else）</b>：根據條件決定要執行哪段程式。</li>
+                                <pre>
+                                    if (條件) {
+                                        // true 時執行
+                                    } else {
+                                        // false 時執行
+                                    }
+                                </pre>
+
+                                <li><b>多條件判斷（else if）</b>：依序檢查多個條件，最先符合的會被執行。</li>
+                                <pre>
+                                    if (條件1) {
+                                    } else if (條件2) {
+                                    } else if (條件3) {
+                                    } else {
+                                    }
+                                </pre>
+                    <li><b>變數</b>：
+                        <ul>
+                            <li>var：可重複宣告（不推薦）。</li>
+                            <li>let：區塊作用域，可重新賦值。</li>
+                            <li>const：常數，不可重新賦值。</li>
+                        </ul>
+                    </li>
+
+                    <li><b>物件（Object）</b>：由屬性 + 方法組成。</li>
+                    <pre>var car = {model:"Toyota", start:function(){...}};</pre>
+
+                    <li><b>陣列（Array）</b>：儲存多個資料，可用索引讀取。</li>
+                    <pre>var cars = ["A","B","C"];</pre>
+
+                    <li><b>陣列常用方法</b>：</li>
+                        <ul>
+                            <li>.sort()：排序</li>
+                            <li>.reverse()：反轉</li>
+                            <li>.push() / .pop()：尾端新增 / 移除</li>
+                            <li>.unshift() / .shift()：開頭新增 / 移除</li>
+                            <li>.join()：以字串輸出陣列內容</li>
+                            <li>.indexOf()：查找指定元素位置</li>
+                        </ul>
+
+                    <li><b>取值與呈現</b>：</li>
+                        document.getElementById("msg").innerText = ...
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
+</div>
+
 <!-- 第X堂課 -->
 <!-- 
 <div class="section">

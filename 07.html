@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七堂</title>
+</head>
+<body>
+    <h1>第七堂</h1>
+
+    <h2>自訂函數</h2>
+    <p>函數（function）是用來封裝可重複使用的一段程式碼，可以自行命名並呼叫。</p>
+
+    <h2>變數與常數</h2>
+    <p>在 JavaScript 中，可以使用 <b>var</b>、<b>let</b>、<b>const</b> 宣告變數與常數。</p>
+
+    <pre>
+        // 自訂函數語法示範
+        function functionName(parameter) {
+            // 函數內的程式
+            // 可選擇是否 return 回傳值
+        }
+    </pre>
+
+    <hr>
+    <!-- #msg01 將 showMessage() 的結果顯示在這裡 -->
+    <p id="msg01">將結果顯示在此</p>
+
+    <!-- 輸入框 + 按鈕，觸發 showMessage() -->
+    <input type="text" id="myText" value="test" placeholder="請輸入訊息">
+    <button onclick="showMessage()">執行</button>
+
+    <hr>
+    <!-- msg02 顯示 sum() 的計算結果 -->
+    <p id="msg02">將結果顯示在此</p>
+    <input type="button" value="計算"
+        onclick="document.getElementById('msg02').innerText = sum(1,1)">
+
+    <hr>
+    <h2>變數與常數</h2>
+    <p>變數用來儲存資料，資料類型包含数字、字串、布林值等。</p>
+    <p id="msg03"></p>
+
+    <hr>
+    <h2>物件</h2>
+    <p>物件（Object）用來表示具有屬性（property）與方法（method）的資料結構。</p>
+    <p id="msg04">Car message</p>
+
+    <hr>
+    <h2>陣列</h2>
+    <p>陣列（Array）用來儲存多筆資料，可透過索引值（index）讀取。</p>
+    <p id="msg05">Array message</p>
+<hr>
+    <h2>判斷式</h2>
+    <pre>
+        if(條件){
+            //條件為true
+        }eles{
+            //條件為false
+        }
+    </pre>
+<input type="number" name="" id="score" placeholder="請輸入分數">
+<button onclick="checkScore()">檢查分數</button>
+<h2>多條件判斷式</h2>
+<pre>
+
+</pre>
+
+    <script>
+
+
+        //判斷式
+        function checkScore(){
+            let score = document.getElementById("score").value;
+            if(score == 100){
+                alert("滿分");
+            }else if(score >= 90){
+                alert("優等");
+            }else if(score >= 80){
+                alert("甲等");
+            }else if(score >= 70){
+                alert("乙等");
+            }else if(score >= 60){
+                alert("及格");
+            }else if(score >= 50){
+                alert("補考");
+            }else{
+                alert("不及格");
+            }
+        }
+
+        /*--------------------------------------
+            陣列示範（msg05）
+        --------------------------------------*/
+
+        // 宣告陣列
+        var cars = ["FORD", "TOYOTA", "MAZDA"];
+        console.log("原始 cars：", cars.join());
+
+        // 排序 A → Z
+        cars.sort();
+        console.log("排序後 cars：", cars.join());
+
+        // 反轉 Z → A
+        cars.reverse();
+        console.log("反轉後 cars：", cars.join());
+
+        // 科目分數的陣列
+        var chinese_score = [85, 90, 70, 82, 65, 15, 87, 75, 84, 34];
+        var math_score    = [92, 88, 77, 95, 60, 25, 80, 72, 91, 40];
+        var english_score = [78, 85, 69, 88, 55, 20, 83, 74, 79, 38];
+
+        // 更正錯誤：length、join() 必須放在陣列後面
+        console.log("chinese length：", chinese_score.length);
+        console.log("math indexOf(100)：", math_score.indexOf(100));
+        console.log("english：", english_score.join());
+
+        // 英文成績排序（由小到大）
+        english_score.sort(function(a,b){ return a - b });
+        console.log("english sort：", english_score.join());
+
+        english_score.reverse();
+        console.log("english reverse：", english_score.join());
+
+        // 陣列 push / unshift / pop / shift
+        console.log("原始:",english_score.join());
+        english_score.push(100);     // 尾端加入
+        console.log("push:",english_score.join());
+        english_score.unshift(99);   // 開頭加入
+        console.log("unshift:",english_score.join());
+        english_score.pop();         // 刪除尾端
+        console.log("pop:",english_score.join());
+        english_score.shift();       // 刪除開頭
+        console.log("shift:",english_score.join());
+
+
+        // 顯示前三科平均
+        document.getElementById("msg05").innerHTML = 
+            "國英數總分：" + (chinese_score[0] + math_score[0] + english_score[0]) + "<br>" +
+            "平均：" + ((chinese_score[0] + math_score[0] + english_score[0]) / 3);
+
+
+        /*--------------------------------------
+            物件示範（msg04）
+        --------------------------------------*/
+        var car = {
+            color: "red",
+            model: "Toyota",
+            year: 2020,
+            start: function(){
+                return "This car is starting.";
+            },
+            stop: function(){
+                return "This car is stopping.";
+            }
+        };
+
+        // 修改物件屬性
+        car.model = "Model";       // 點記法
+        car["color"] = "Yellow";   // 中括號記法
+
+        document.getElementById("msg04").innerText = 
+            "Car Model: " + car.model + 
+            ", Color: " + car.color + 
+            " | " + car.start() + 
+            " | " + car.stop();
+
+
+        /*--------------------------------------
+            變數示範（msg03）
+        --------------------------------------*/
+        let a = 10;
+        var b = 20;
+        const PI = 3.14159; // const 為常數，不可重新指定
+
+        a = 50;
+        let total = sum(a, PI);
+        document.getElementById("msg03").innerText = "a + PI = " + total;
+
+
+        /*--------------------------------------
+            自訂函數 showMessage（msg01）
+        --------------------------------------*/
+        function showMessage() {
+            let message = document.getElementById("myText").value;
+            let msg = document.getElementById("msg01");
+
+            msg.innerText = message;
+            msg.style.color = "red";
+            msg.style.fontSize = "24px";
+        }
+
+        /*--------------------------------------
+            自訂函數 sum（msg02）
+        --------------------------------------*/
+        function sum(a, b) {
+            return a + b;
+        }
+
+    </script>
+</body>
+</html>
