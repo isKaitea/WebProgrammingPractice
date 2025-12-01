@@ -108,7 +108,8 @@ pre {
     <p>
         <a href="#第六堂課">第六堂課</a> |
         <a href="#第七堂課">第七堂課</a> |
-        <a href="#第八堂課">第八堂課</a>
+        <a href="#第八堂課">第八堂課</a> |
+        <a href="#第九堂課">第九堂課</a> |
     </p>
 </nav>
 
@@ -542,6 +543,140 @@ typeof undefined // "undefined"
 </tr>
 
 </table>
+
+<a class="back-top" href="#top">↑ 回到最上</a>
+</div>
+<!-- 第九堂課 -->
+<div class="section">
+<h2 id="第九堂課">第九堂課：AJAX 與 jQuery</h2>
+<p class="highlight">課堂練習 web09：
+    <a href="09.html" target="_blank">
+        [09.html] jQuery 事件、AJAX 讀取 JSON、表單驗證
+    </a>
+</p>
+<table>
+<!-- HTML -->
+<tr>
+    <td style="width:15%;">HTML</td>
+    <td>
+        <ul>
+            <li>使用 &lt;script src="jquery.js"&gt; 載入 jQuery。</li>
+            <li>&lt;select&gt; 搭配 onchange 可觸發選單事件。</li>
+            <li>&lt;form&gt; 若回傳 false 可阻止表單送出。</li>
+            <li>AJAX 通常使用一個容器如 &lt;div id="news"&gt; 來顯示資料。</li>
+        </ul>
+    </td>
+</tr>
+
+<!-- JavaScript / jQuery -->
+<tr>
+    <td>JavaScript</td>
+    <td>
+        <ul>
+
+            <!-- AJAX -->
+            <li><b>AJAX 非同步讀取 JSON</b></li>
+<pre>
+$.ajax({
+    url: 'news.json',
+    dataType: 'json',
+    success: function(data){
+        $.each(data, function(i, item){
+            $('#news').append(
+                '&lt;li&gt;' + item.date + '-' + item.title + '&lt;/li&gt;'
+            );
+        });
+    },
+    error: function(){
+        console.log('Error fetching data');
+    }
+});
+</pre>
+
+            <!-- jQuery 基本語法 -->
+            <li><b>jQuery 基本語法</b>：<code>$(selector).action()</code></li>
+
+<pre>
+// ready（舊寫法）
+$(document).ready(function(){
+    // code
+});
+
+// ready（新寫法）
+$(function(){
+    // code
+});
+</pre>
+
+            <!-- 隱藏段落 -->
+            <li><b>事件：click()</b> — 隱藏所有段落</li>
+<pre>
+$('button').click(function(){
+    $('p').hide();
+});
+</pre>
+
+            <!-- ID 選擇器 -->
+            <li><b>指定 ID 選擇器</b></li>
+<pre>
+$('#p1').hide();
+$('#p2').show();
+</pre>
+
+            <!-- focus blur -->
+            <li><b>focus / blur</b>：輸入框事件</li>
+<pre>
+$('#txt1').focus(function(){
+    $(this).css('background-color', 'lightblue');
+});
+
+$('#txt2').blur(function(){
+    $(this).css('background-color', 'lightblue');
+});
+</pre>
+
+            <!-- submit -->
+            <li><b>submit 事件</b>：讀取表單資料 + 阻止送出</li>
+<pre>
+$('#form1').on('submit', function(){
+    let username = $('#username').val();
+    let usertel  = $('#usertel').val();
+    alert('姓名:' + username + '\\n電話:' + usertel);
+    return false;  // 阻止送出
+});
+</pre>
+
+            <!-- Google 查詢 -->
+            <li><b>查詢功能</b>：模仿 Google 搜尋</li>
+            <p>使用 &lt;form action="https://www.google.com/search"&gt;，並將搜尋字串放在 name="q"。</p>
+
+            <!-- 註冊功能 -->
+            <li><b>註冊表單驗證</b></li>
+<pre>
+$('#form_register').on('submit', function(){
+    if($('#name').val()==='' || $('#user').val()===''){
+        $('#msg').text('請輸入所有欄位');
+        return false;
+    }
+    if($('#password').val() !== $('#confirm_pw').val()){
+        $('#msg').text('密碼不一致');
+        return false;
+    }
+});
+</pre>
+
+            <!-- 修正錯誤 -->
+            <li><b>常見錯誤修正</b>：</li>
+            <ul>
+                <li><code>$this</code> → ❌（錯誤）</li>
+                <li><code>$(this)</code> → ✔ 正確寫法</li>
+            </ul>
+
+        </ul>
+    </td>
+</tr>
+</table>
+
 
 <a class="back-top" href="#top">↑ 回到最上</a>
 </div>
