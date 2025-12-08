@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <section id="teaching-rwd-bootstrap5" class="py-5">
+        <div class="container">
+            <h1 class="text-success text-center">bootstrap 5</h1>
+            <h2>斷點</h2>
+            <ul>
+                <li>xs(預設):超小螢幕(手機直向)小於 576px</li>
+                <li>sm:小螢幕(手機橫向)大於等於 576px</li>
+                <li>md:中螢幕(平板直向)於等於 768px</li>
+            </ul>
+            <h2>容器類</h2>
+            <ul>
+                <li>.container:固定寬度容器,會隨斷點改變寬度</li>
+                <li>.container-fluid:滿版寬度容器,寬度100%</li>
+            </ul>
+            <h2>網格系統</h2>
+            <div class="row">
+                <div class="col-1" style="background-color: aqua;">a</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">b</div>
+                <div class="col-1" style="background-color: aqua;">c</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">d</div>
+                <div class="col-1" style="background-color: aqua;">e</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">f</div>
+                <div class="col-1" style="background-color: aqua;">g</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">h</div>
+                <div class="col-1" style="background-color: aqua;">i</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">j</div>
+                <div class="col-1" style="background-color: aqua;">k</div>
+                <div class="col-1" style="background-color: rgb(192, 146, 235);">l</div>
+            </div>
+
+            <div class="row">
+                <div class="col-2" style="background-color: aqua;">g</div>
+                <div class="col-2" style="background-color: rgb(192, 146, 235);">h</div>
+                <div class="col-2" style="background-color: aqua;">i</div>
+                <div class="col-2" style="background-color: rgb(192, 146, 235);">j</div>
+                <div class="col-2" style="background-color: aqua;">k</div>
+                <div class="col-2" style="background-color: rgb(192, 146, 235);">l</div>
+            </div>
+            <div class="row">
+                <div class="col-4" style="background-color: aqua;">g</div>
+                <div class="col-4" style="background-color: rgb(192, 146, 235);">h</div>
+                <div class="col-4" style="background-color: aqua;">i</div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 col-md-6" style="background-color: aqua;">g</div>
+                <div class="col-3 col-md-6" style="background-color: rgb(192, 146, 235);">h</div>
+                <div class="col-3 col-md-6" style="background-color: aqua;">i</div>
+                <div class="col-3 col-md-6" style="background-color: rgb(192, 146, 235);">h</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-md-3 col-sm-4" style="background-color: aqua;">g</div>
+                <div class="col-xl-6 col-m d-3 col-sm-4" style="background-color: rgb(192, 146, 235);">h</div>
+                <div class="col-xl-6 col-md-3 col-sm-4" style="background-color: aqua;">i</div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 offset-xl-0 col-md-3 col-sm-4 offset-sm-2" style="background-color: aqua;">g</div>
+                <div class="col-xl-6 col-m d-3 col-sm-4" style="background-color: rgb(192, 146, 235);">h</div>
+            </div>
+            <h2>間距</h2>
+            <p>Bootstrap提供了簡單的間距工具類,可以快速設置元素的外邊距【(margin)和內邊距(padding)。</p>
+            <ul>
+                <li>m- margin 外邊距</li>
+                <li>p - padding 内邊距</li>
+                <li>t - top 上方</li>
+                <li>b - bottom 下方</li>
+                <li>s - start 左方(LTR 文字方向)</li>
+                <li>e - end 右方(LTR 文字方向)</li>
+                <li>x-左右</li>
+                <li>y- 上下</li>
+                <li>數值範圍:0,1,2,3,4,5,auto(0為無間距,1-5 為不同大小的間距,auto 為自動)</li>
+            </ul>
+            <div class="row">
+                <div class="col-4 bg-primary text-white p-3 mt-3">内邊距 p-3,外邊距 mb-3</div>
+                <div class="col-4 bg-secondary text-white p-2 mt-2">内邊距 p-2,外邊距 mb-2</div>
+                <div class="col-4 bg-success text-white px-5 py-2 mt-5">内邊距 p-1,外邊距 mb-1</div>
+            </div>
+            <h2>標題</h2>
+            <p>Bootstrap 提供了預設的標題樣式,可以使用h1到h6標籤來表示不同層級的標題。</p>
+            <h2>Display</h2>
+            <p>文字大小可使用 display 類別來設置,範圍從display-1(最大)到display-6(最小)。</p>
+            <div class="row">
+                <div class="col-12 display-1 bg-warning py-3 ">
+                    烏龍院
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teaching-rwd-bootstrap5" class="py-5">
+        <div class="container">
+            <ul>
+
+                <li>muted - 次要文字色彩</li>
+            </ul>
+
+            <div class="table-responsive-sm">
+                <table class="table table-striped border-info">
+                    <tr>
+                        <td class="text-nowrap">primary-重要的色彩</td>
+                        <td class="text-nowrap">secondary-次要的色彩</td>
+                        <td class="text-nowrap">success -成功的色彩</td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">danger -危險的色彩</td>
+                        <td class="text-nowrap">warning-警告的色彩</td>
+                        <td class="text-nowrap">info-資訊的色彩</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <h2>圖片</h2>
+        <p>使用.img-fluid 類別可以讓圖片在不同裝置上自動調整大小,保持響應式設計。</p>
+        <p>可先安裝「simple Placeholder Images」外掛,即可輸入「place」即時產生隨機圖片</p>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://picsum.photos/800/600" alt="Placeholder Image">
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/800/600" alt="Placeholder Image">
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/800/600" alt="Placeholder Image">
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/800/600" alt="Placeholder Image">
+            </div>
+            <div class="row py-4">
+                <div class="col-md-6 text-center bg-secondary rounded-5 p-2">
+                    <img src="https://picsum.photos/200/200" alt="Placeholder Image">
+                </div>
+            </div>
+        </div>
+
+        <h2>圖片區</h2>
+        <figure class="figure">
+            <img src="https://picsum.photos/400/200" class="figure-img img-fluid rounded" alt="" />
+            <figcaption class="figure-caption text-start">
+                Some Word
+            </figcaption>
+        </figure>
+
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
