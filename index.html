@@ -117,7 +117,7 @@ pre {
         <a href="#第十二堂課">第十二堂課</a> |
         <a href="#第十三堂課">第十三堂課</a> |
         <a href="#第十四堂課">第十四堂課</a> |
-        <a href="#第十五堂課">第十五堂課</a> 
+        <a href="./resume/index.html">個人履歷</a> 
     </p>
     
 </nav>
@@ -817,6 +817,69 @@ $('#form_register').on('submit', function(){
                     </li>
                     <li>透過多重選取（Alt+滑鼠 / Ctrl+D）一次修改多個 <code>Title</code> 或 <code>Description</code>。</li>
                     <li>善用複製貼上同一組元件（例如卡片、按鈕群）再修改內容。</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <a class="back-top" href="#top">↑ 回到最上</a>
+</div>
+<!-- 第十二堂課 -->
+<div class="section">
+    <h2 id="第十二堂課">第十二堂課：Bootstrap 元件與排版應用</h2>
+
+    <p class="highlight">
+        課堂練習 web12：
+        <a href="#" target="_blank">
+            Bootstrap 元件練習（Modal／進度條／表單）
+        </a>
+    </p>
+
+    <table>
+        <tr>
+            <td style="width: 15%;">HTML</td>
+            <td>
+                <ul>
+                    <li>引用 Bootstrap 5 CDN（CSS＋JS）</li>
+                    <li>模態框（<code>.modal</code>、<code>.modal-dialog</code>、<code>.modal-content</code>）</li>
+                    <li>按鈕觸發 Modal：<code>data-bs-toggle="modal"</code>、<code>data-bs-target="#modalId"</code></li>
+                    <li>邊框元素：<code>&lt;span class="border border-5 border-primary rounded-3 p-2"&gt;</code></li>
+                    <li>圖片浮動排版：<code>class="float-start me-3"</code></li>
+                    <li>區塊置中與文字對齊：<code>text-center</code>、<code>mx-auto</code>、<code>w-25</code>、<code>h-50</code></li>
+                    <li>進度條元件：<code>.progress</code> + <code>.progress-bar</code></li>
+                    <li>表單結構：<code>&lt;form&gt;</code> 搭配 <code>.row</code>、<code>.col-md-6</code>、<code>.form-control</code></li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>CSS / Bootstrap 類別</td>
+            <td>
+                <ul>
+                    <li><code>border</code>、<code>border-5</code>、<code>border-primary</code>、<code>rounded-3</code>：設定粗邊框與圓角</li>
+                    <li><code>float-start</code>、<code>me-3</code>：圖片左浮動與右邊外距</li>
+                    <li><code>text-center</code>、<code>mx-auto</code>：文字置中、區塊水平置中</li>
+                    <li><code>progress</code>、<code>progress-bar</code>：進度條元件</li>
+                    <li><code>bg-danger</code>、<code>bg-success</code>：進度條顏色</li>
+                    <li><code>row</code>、<code>col-md-6</code>、<code>col-12</code>：Bootstrap 栅格系統排版</li>
+                    <li><code>form-control</code>：統一 input、textarea 外觀</li>
+                    <li><code>btn</code>、<code>btn-primary</code>、<code>btn-warning</code>：按鈕樣式</li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>快捷鍵 / 小重點</td>
+            <td>
+                <ul>
+                    <li>VS Code：<code>Alt + Shift + ↓ / ↑</code> 複製一行</li>
+                    <li>VS Code：<code>Ctrl + /</code> 加上或取消單行註解</li>
+                    <li>Chrome：<code>F12</code> 開啟開發者工具，檢查元素與排版</li>
+                    <li>Modal JS 初始化正確寫法：
+                        <br>
+                        <code>const myModal = new bootstrap.Modal(document.getElementById('modalId'));</code>
+                        <br>（注意是 <code>Modal</code> 不是 <code>Model</code>，ID 也要對到 <code>modalId</code>）
+                    </li>
                 </ul>
             </td>
         </tr>
