@@ -15,15 +15,69 @@
     .setSection {
         padding: 80px 20px;
     }
+
+    header {
+        background-image: url('img/bg.jpg');
+        height: 500px;
+        background-position: center center;
+        background-size: cover;
+        padding-top: 60px;
+    }
+
+    .navbar {
+        background-color: transparent !important;
+        /* 背景透明 */
+
+    }
+
+    .navbar a {
+        color: #ffffff !important;
+        /* 文字白色 */
+    }
+
+    .navbar-scrolled {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        /* 深色 50% */
+        backdrop-filter: blur(4px);
+        /* 可選：有霧面質感 */
+    }
+
+    /* 預設透明 */
+    .navbar-transparent {
+        background-color: rgba(255, 255, 255, 0.3);
+        /* 淺透明 */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(4px);
+        /* 可選：增加模糊玻璃感 */
+    }
+
+    /* 捲動後加深 */
+    .navbar-scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+        /* 變成幾乎不透明 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        /* 加陰影提高層次 */
+    }
 </style>
+<script>
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("navbar-scrolled");
+        } else {
+            navbar.classList.remove("navbar-scrolled");
+        }
+    });
+
+</script>
 
 <body>
     <header>
         <!-- place navbar here -->
         <!-- navbar -->
         <section id="navbar01">
-            <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-                <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-light fixed-top navbar-transparent">
+                <div class="container-lg">
                     <a class="navbar-brand" href="#navbar01">我的履歷</a>
                     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -34,6 +88,7 @@
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" href="#banner" aria-current="page">首頁</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#myIntro">個人簡介</a>
                             </li>
@@ -65,7 +120,10 @@
 
         <!-- 輪播 -->
         <section id="banner">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <p class="text-center mt-5"><img class="rounded-circle" style="width: 250px;" src="./img/my.jpg" alt=""></p>
+            <h1 class="text-center text-light my-5">楊凱婷</h1>
+            <p class="text-center text-light">我是一個持續成長的創作者與解題者</p>
+            <!-- <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <img style="width: 1200px; height: 560px;" src="./img/bg.jpg" class="w-100 d-block"
@@ -77,245 +135,261 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
-
-        <section id="myIntro" class="container setSection my-5">
-            <div class="row">
-                <!-- 左邊放照片 -->
-                <div class="col-md-4">
-                    <img src="./img/cute.png" class="img-fluid rounded" alt="我的照片">
-                </div>
-
-                <!-- 右邊放文字 -->
-                <div class="col-md-8">
-                    <h1>個人簡介</h1>
-                    <p>
-                        我是國立高雄科技大學資訊管理系大四學生，專長於前端與後端整合開發，
-                        熟悉 HTML、CSS、JavaScript、PHP、MySQL 等技術，也有使用 React Native 開發 APP 的經驗。
-                        曾以步態分析系統 APP 獲得高科大實務專題金質獎，並在全國技能競賽南區網頁技術項目取得第三名。
-                    </p>
-
-                    <div class="row mt-5">
-                        <div class="col-sm-6">
-                            <p><strong>姓名：</strong>楊凱婷</p>
-                            <p><strong>目前身分：</strong>資管系大四生</p>
-                            <p><strong>就讀學校：</strong>國立高雄科技大學</p>
-                            <p><strong>科系：</strong>資訊管理系</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p><strong>手機：</strong>0985-XXX-223</p>
-                            <p><strong>電子信箱：</strong>keXXXXXXX@gmail.com</p>
-                            <p><strong>目前城市：</strong>高雄市</p>
-                            <p><strong>求職目標：</strong>網頁程式設計實習生</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="educationWork" class="setSection">
-            <div class="row bg-secondary text-light">
-                <h1 class="col-12 mt-3 text-center">求學與工作</h1>
-                <div class="col-6">
-                    <b>　求學經歷</b>
-                </div>
-                <div class="col-6">
-                    <b>　工作經歷</b>
-                </div>
-                <div class="col-6 text-dark">
-                    <div class="row  bg-light m-4">
-                        <div class="col-3 mt-3">（2022–2026）</div>
-                        <div class="col-6 mt-3">國立高雄科技大學 資訊管理系</div>
-                        <hr>
-                        <div class="col-3 mt-3">（2019–2022）</div>
-                        <div class="col-6 mt-3">高雄市立海青高級工商 資料處理科</div>
-                        <hr>
-
-                    </div>
-                </div>
-                <div class="col-6 text-dark">
-                    <div class="row  bg-light m-4">
-                        <div class="col-3 mt-3">校內工讀生</div>
-                        <div class="col-6 mt-3">活動影片剪輯、海報製作、Excel 自動化處理</div>
-                        <hr>
-                        <div class="col-3 mt-3">海青工商<br>網頁技術選手助教</div>
-                        <div class="col-6 mt-3">教授 PHP、HTML、MySQLi 基礎語法</div>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="container my-5 setSection">
-            <h1 class="mb-4">專業技能</h1>
-
-            <div class="row">
-                <!-- 左上：前端 -->
-                <div class="col-md-6 mb-4">
-                    <h4 class="mb-3">前端 Front-End</h4>
-
-                    <!-- HTML -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">HTML</div>
-                        <div class="float-end w-50 text-end">90%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-danger" style="width: 90%;"></div>
-                    </div>
-
-                    <!-- CSS -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">CSS</div>
-                        <div class="float-end w-50 text-end">80%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-info" style="width: 80%;"></div>
-                    </div>
-
-                    <!-- JS -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">JavaScript</div>
-                        <div class="float-end w-50 text-end">65%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-warning" style="width: 65%;"></div>
-                    </div>
-
-                    <!-- React Native -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">React Native</div>
-                        <div class="float-end w-50 text-end">70%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-success" style="width: 70%;"></div>
-                    </div>
-                </div>
-
-
-                <!-- 右上：後端 -->
-                <div class="col-md-6 mb-4">
-                    <h4 class="mb-3">後端 Back-End</h4>
-
-                    <!-- PHP -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">PHP</div>
-                        <div class="float-end w-50 text-end">80%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-primary" style="width: 80%;"></div>
-                    </div>
-
-                    <!-- MySQL -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">MySQL / mysqli</div>
-                        <div class="float-end w-50 text-end">75%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-secondary" style="width: 75%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 第二列 -->
-            <div class="row">
-                <!-- 左下：程式語言 -->
-                <div class="col-md-6 mb-4">
-                    <h4 class="mb-3">程式語言 Languages</h4>
-
-                    <!-- Python -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">Python</div>
-                        <div class="float-end w-50 text-end">80%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-dark" style="width: 80%;"></div>
-                    </div>
-
-                    <!-- Java -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">Java</div>
-                        <div class="float-end w-50 text-end">70%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-warning" style="width: 70%;"></div>
-                    </div>
-
-                    <!-- R -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">R</div>
-                        <div class="float-end w-50 text-end">60%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-success" style="width: 60%;"></div>
-                    </div>
-
-                    <!-- C# -->
-                    <div class="clearfix">
-                        <div class="float-start w-50">C#（基礎）</div>
-                        <div class="float-end w-50 text-end">50%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-secondary" style="width: 50%;"></div>
-                    </div>
-                </div>
-
-                <!-- 右下：工具 -->
-                <div class="col-md-6 mb-4">
-                    <h4 class="mb-3">工具 Tools</h4>
-
-                    <div class="clearfix">
-                        <div class="float-start w-50">VS Code</div>
-                        <div class="float-end w-50 text-end">90%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-primary" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="clearfix">
-                        <div class="float-start w-50">XAMPP</div>
-                        <div class="float-end w-50 text-end">80%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-warning" style="width: 80%;"></div>
-                    </div>
-
-                    <div class="clearfix">
-                        <div class="float-start w-50">Power BI（基礎）</div>
-                        <div class="float-end w-50 text-end">65%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-info" style="width: 65%;"></div>
-                    </div>
-
-                    <div class="clearfix">
-                        <div class="float-start w-50">Excel</div>
-                        <div class="float-end w-50 text-end">85%</div>
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar bg-success" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
     </header>
-    <main>
 
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+    <section id="myIntro" class="container setSection my-5">
+        <div class="row">
+            <!-- 左邊放照片 -->
+            <div class="col-md-4">
+                <img src="./img/cute.png" class="img-fluid rounded" alt="我的照片">
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+            <!-- 右邊放文字 -->
+            <div class="col-md-8">
+                <h1>個人簡介</h1>
+                <p>
+                    我是國立高雄科技大學資訊管理系大四學生，專長於前端與後端整合開發，
+                    熟悉 HTML、CSS、JavaScript、PHP、MySQL 等技術，也有使用 React Native 開發 APP 的經驗。
+                    曾以步態分析系統 APP 獲得高科大實務專題金質獎，並在全國技能競賽南區網頁技術項目取得第三名。
+                </p>
+
+                <div class="row mt-5">
+                    <div class="col-sm-6">
+                        <p><strong>姓　　名：</strong>楊凱婷</p>
+                        <p><strong>目前身分：</strong>資管系大四生</p>
+                        <p><strong>就讀學校：</strong>國立高雄科技大學</p>
+                        <p><strong>科　　系：</strong>資訊管理系</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><strong>手　　機：</strong>0985-XXX-223</p>
+                        <p><strong>電子信箱：</strong>keXXXXXXX@gmail.com</p>
+                        <p><strong>目前城市：</strong>高雄市</p>
+                        <p><strong>求職目標：</strong>網頁程式設計實習生</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="educationWork" class="setSection">
+        <div class="row bg-secondary text-light">
+            <h1 class="col-12 mt-3 text-center">求學與工作</h1>
+            <div class="col-6">
+                <b class="mb-4">　求學經歷</b>
+                <div class="row">
+                    <div class="col-md-4 text-center text-warning">
+                        （2022–2026）
+                    </div>
+                    <div class="col-md-8">
+                        <h4>國立高雄科技大學</h4>
+                        <p>資訊管理系</p>
+                    </div>
+                    <div class="col-md-4 text-center text-warning">
+                        （2019–2022）
+                    </div>
+                    <div class="col-md-8">
+                        <h4>高雄市立海青高級工商</h4>
+                        <p>資料處理科</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <b class="mb-4">　工作經歷</b>
+                <div class="row">
+                    <div class="col-md-4 text-center text-warning">
+                        校內工讀生
+                    </div>
+                    <div class="col-md-8">
+                        <p>活動影片剪輯、海報製作、Excel 自動化處理</p>
+                    </div>
+                    <div class="col-md-4 text-center text-warning">
+                        海青工商<br>網頁技術選手助教
+                    </div>
+                    <div class="col-md-8">
+                        <h4>高雄市立海青高級工商</h4>
+                        <p>教授 PHP、HTML、MySQLi 基礎語法</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container my-5 setSection">
+        <h1 class="mb-4">專業技能</h1>
+
+        <div class="row">
+            <!-- 左上：前端 -->
+            <div class="col-md-6 mb-4">
+                <h4 class="mb-3">前端 Front-End</h4>
+
+                <!-- HTML -->
+                <div class="clearfix">
+                    <div class="float-start w-50">HTML</div>
+                    <div class="float-end w-50 text-end">90%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" style="width: 90%;"></div>
+                </div>
+
+                <!-- CSS -->
+                <div class="clearfix">
+                    <div class="float-start w-50">CSS</div>
+                    <div class="float-end w-50 text-end">80%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" style="width: 80%;"></div>
+                </div>
+
+                <!-- JS -->
+                <div class="clearfix">
+                    <div class="float-start w-50">JavaScript</div>
+                    <div class="float-end w-50 text-end">65%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" style="width: 65%;"></div>
+                </div>
+
+                <!-- React Native -->
+                <div class="clearfix">
+                    <div class="float-start w-50">React Native</div>
+                    <div class="float-end w-50 text-end">70%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 70%;"></div>
+                </div>
+            </div>
+
+
+            <!-- 右上：後端 -->
+            <div class="col-md-6 mb-4">
+                <h4 class="mb-3">後端 Back-End</h4>
+
+                <!-- PHP -->
+                <div class="clearfix">
+                    <div class="float-start w-50">PHP</div>
+                    <div class="float-end w-50 text-end">80%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" style="width: 80%;"></div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="clearfix">
+                    <div class="float-start w-50">MySQL / mysqli</div>
+                    <div class="float-end w-50 text-end">75%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-secondary" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二列 -->
+        <div class="row">
+            <!-- 左下：程式語言 -->
+            <div class="col-md-6 mb-4">
+                <h4 class="mb-3">程式語言 Languages</h4>
+
+                <!-- Python -->
+                <div class="clearfix">
+                    <div class="float-start w-50">Python</div>
+                    <div class="float-end w-50 text-end">80%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-dark" style="width: 80%;"></div>
+                </div>
+
+                <!-- Java -->
+                <div class="clearfix">
+                    <div class="float-start w-50">Java</div>
+                    <div class="float-end w-50 text-end">70%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                </div>
+
+                <!-- R -->
+                <div class="clearfix">
+                    <div class="float-start w-50">R</div>
+                    <div class="float-end w-50 text-end">60%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 60%;"></div>
+                </div>
+
+                <!-- C# -->
+                <div class="clearfix">
+                    <div class="float-start w-50">C#（基礎）</div>
+                    <div class="float-end w-50 text-end">50%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-secondary" style="width: 50%;"></div>
+                </div>
+            </div>
+
+            <!-- 右下：工具 -->
+            <div class="col-md-6 mb-4">
+                <h4 class="mb-3">工具 Tools</h4>
+
+                <div class="clearfix">
+                    <div class="float-start w-50">VS Code</div>
+                    <div class="float-end w-50 text-end">90%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" style="width: 90%;"></div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="float-start w-50">XAMPP</div>
+                    <div class="float-end w-50 text-end">80%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="float-start w-50">Power BI（基礎）</div>
+                    <div class="float-end w-50 text-end">65%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" style="width: 65%;"></div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="float-start w-50">Excel</div>
+                    <div class="float-end w-50 text-end">85%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- projects -->
+     <section id="projects">
+
+     </section>
+<!-- contact -->
+     <section id="contact">
+        
+     </section>
+    <main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
